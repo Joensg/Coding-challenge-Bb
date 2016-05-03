@@ -1,0 +1,17 @@
+<div class="container topofpage" ng-controller="BservicesController">
+    <div class="row">
+        <div class="col-xs-12">
+            <h2>{{companyName}}</h2>
+            <strong>company id: {{companyId}}</strong>
+            <p>{{companyDescription}}</p>
+            <h4>Bookable Services:</h4>
+            <div class="row center">
+                <div ng-repeat="bservice in bservices | orderBy:'prices[0]'" class="col-md-6 col-xs-12">
+                    <my-bservices info="bservice"></my-bservices>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
